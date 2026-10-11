@@ -1,14 +1,14 @@
-## Ne değişiyor
+## What changes
 
-<!-- Bir iki cümle. Nedeni, nasılından önemli. -->
+<!-- One or two sentences. Why matters more than how. English or Turkish is fine. -->
 
-## Denetim
+## Checks
 
 - [ ] `npx tsc --noEmit`
 - [ ] `cargo clippy --workspace --all-targets -- -D warnings`
-- [ ] `cargo test -p tlk-rpf-core` (gerçek dosyalarla, `testdata/` dolu)
-- [ ] Bir biçime dokunduysam `cargo run -p tlk-rpf-core --example kirici` 0 çökme veriyor
-- [ ] Kullanıcı dosyasına yazan yol yedek alıyor ve geçici dosya + atomik yer değiştirme kullanıyor
+- [ ] `cargo test -p tlk-rpf-core` (with real files in `testdata/`)
+- [ ] If I touched a format, `cargo run -p tlk-rpf-core --example kirici` reports 0 crashes
+- [ ] Every path that writes a user's file takes a backup and goes through a temporary file and an atomic rename
 
-<!-- Yeni biçim? core/tests/gercek.rs içine gerçek dosyayı düzenleyip yeniden okuyan
-     ve dosyanın geri kalanının değişmediğini doğrulayan bir test ekle. -->
+<!-- New format? Add a test to core/tests/gercek.rs that edits a real file, re-reads it
+     and checks that the rest of the file is unchanged. -->

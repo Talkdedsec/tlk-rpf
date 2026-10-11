@@ -1,48 +1,51 @@
-name: Hata bildirimi
-description: Bir şey çalışmıyor, çöküyor ya da yanlış sonuç veriyor.
-labels: [hata]
+name: Bug report
+description: Something does not work, crashes or gives a wrong result.
+labels: [bug]
 body:
+  - type: markdown
+    attributes:
+      value: Write in English or Turkish. / İngilizce ya da Türkçe yazabilirsin.
   - type: input
-    id: surum
+    id: version
     attributes:
-      label: Sürüm
-      description: Kurucu adındaki ya da Hakkında'daki sürüm.
-      placeholder: "1.0.0"
+      label: Version
+      description: The version in the installer name or in the About box.
+      placeholder: "1.2.0"
     validations:
       required: true
   - type: textarea
-    id: ne-oldu
+    id: what-happened
     attributes:
-      label: Ne oldu
-      description: Ne yaptın, ne bekliyordun, ne oldu?
+      label: What happened
+      description: What did you do, what did you expect and what happened instead?
     validations:
       required: true
   - type: textarea
-    id: adimlar
+    id: steps
     attributes:
-      label: Tekrarlama adımları
+      label: Steps to reproduce
       placeholder: |
-        1. hitfx.rpf aç
+        1. Open my-graphics-pack.rpf
         2. graphics.ytd > dmg_overlay_fade
-        3. Görselle değiştir…
+        3. Replace with image…
     validations:
       required: true
   - type: input
-    id: dosya
+    id: file
     attributes:
-      label: İlgili mod ya da dosya
-      description: Mümkünse modun adı ve indirildiği yer. Başkasının modunu buraya yükleme.
+      label: Mod or file involved
+      description: If you can, the mod's name and where it came from. Do not upload someone else's mod here.
   - type: dropdown
-    id: oyunda
+    id: where
     attributes:
-      label: Sorun nerede görünüyor?
+      label: Where does the problem show up?
       options:
-        - tlk-rpf içinde
-        - FiveM oyun içinde
-        - İkisinde de
+        - Inside tlk-rpf
+        - In game, in FiveM
+        - Both
     validations:
       required: true
   - type: textarea
-    id: ek
+    id: extra
     attributes:
-      label: Ekran görüntüsü ya da hata metni
+      label: Screenshot or error text

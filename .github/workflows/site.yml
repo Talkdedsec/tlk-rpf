@@ -16,16 +16,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  yayinla:
+  deploy:
     name: GitHub Pages
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.dagit.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
 
-      - name: Siteyi topla
+      - name: Assemble site
         run: |
           mkdir -p _site
           cp -r site/. _site/
@@ -38,5 +38,5 @@ jobs:
         with:
           path: _site
 
-      - id: dagit
+      - id: deployment
         uses: actions/deploy-pages@v4

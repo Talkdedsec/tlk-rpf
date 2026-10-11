@@ -1,10 +1,13 @@
-// Dil seçimi, ekran görüntüsü büyütme ve son sürümün indirme bağlantısı.
+// Dil seçimi (varsayılan İngilizce, Türkçe düğmeyle), ekran görüntüsü büyütme ve son sürümün indirme bağlantısı.
 (() => {
   const kok = document.documentElement;
+  const basliklar = { en: "tlk-rpf — FiveM RPF editor", tr: "tlk-rpf — FiveM RPF düzenleyici" };
 
-  const dilAyarla = (dil) => {
+  const dilAyarla = (dil, kaydet) => {
     kok.dataset.dil = dil;
     kok.lang = dil;
+    document.title = basliklar[dil];
+    if (!kaydet) return;
     try {
       localStorage.setItem("dil", dil);
     } catch {
@@ -17,9 +20,8 @@
   } catch {
     /* yok say */
   }
-  const tarayici = (navigator.language || "").toLowerCase().startsWith("tr") ? "tr" : "en";
-  dilAyarla(kayitli === "tr" || kayitli === "en" ? kayitli : tarayici);
-  document.getElementById("dil").addEventListener("click", () => dilAyarla(kok.dataset.dil === "tr" ? "en" : "tr"));
+  dilAyarla(kayitli === "tr" ? "tr" : "en", false);
+  document.getElementById("dil").addEventListener("click", () => dilAyarla(kok.dataset.dil === "tr" ? "en" : "tr", true));
 
   const pencere = document.getElementById("buyuk");
   const buyukResim = pencere.querySelector("img");

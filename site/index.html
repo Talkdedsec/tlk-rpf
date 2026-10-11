@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="tr" data-dil="tr">
+<html lang="en" data-dil="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>tlk-rpf — FiveM RPF düzenleyici</title>
-  <meta name="description" content="FiveM mods klasöründeki .rpf paketleri için ücretsiz ve açık kaynak düzenleyici: doku, görsel ayar, parçacık efekti, model ve harita. Her kayıttan önce yedek, her değişiklikte geri al.">
+  <title>tlk-rpf — FiveM RPF editor</title>
+  <meta name="description" content="Free and open-source editor for the .rpf packages in your FiveM mods folder: textures, visual settings, particle effects, models and maps. A backup before every save, undo for every change.">
   <meta name="theme-color" content="#0d0d0f">
   <link rel="icon" href="ikon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="tlk-rpf — FiveM RPF düzenleyici">
-  <meta property="og:description" content="FiveM mods klasörü için ücretsiz ve açık kaynak .rpf düzenleyici.">
+  <meta property="og:title" content="tlk-rpf — FiveM RPF editor">
+  <meta property="og:description" content="Free and open-source .rpf editor for the FiveM mods folder.">
   <meta property="og:url" content="https://talkdedsec.github.io/tlk-rpf/">
   <meta property="og:image" content="https://talkdedsec.github.io/tlk-rpf/ekran/ozet-hazir-ayarlar.png">
   <meta name="twitter:card" content="summary_large_image">
@@ -24,14 +24,14 @@
         <img src="ikon.svg" alt="" width="30" height="30">
         <span>tlk-rpf</span>
       </a>
-      <nav class="menu" aria-label="Ana menü">
+      <nav class="menu" aria-label="Main menu">
         <a href="#ozellikler"><span class="tr">Özellikler</span><span class="en">Features</span></a>
         <a href="#ekranlar"><span class="tr">Ekranlar</span><span class="en">Screenshots</span></a>
         <a href="#guven"><span class="tr">Güven</span><span class="en">Trust</span></a>
         <a href="#sss"><span class="tr">SSS</span><span class="en">FAQ</span></a>
         <a href="https://github.com/Talkdedsec/tlk-rpf" rel="noopener">GitHub</a>
       </nav>
-      <button class="dil" type="button" id="dil" aria-label="Dil / Language">
+      <button class="dil" type="button" id="dil" aria-label="Language / Dil">
         <span class="tr">EN</span><span class="en">TR</span>
       </button>
     </div>
@@ -66,13 +66,13 @@
         </div>
         <figure class="giris-gorsel">
           <button type="button" class="buyut" data-src="ekran/ozet-hazir-ayarlar.png">
-            <img src="ekran/ozet-hazir-ayarlar.png" width="1440" height="900" alt="tlk-rpf: Talkdedsec Grafik Paketi özeti ve hazır ayarlar">
+            <img src="ekran/ozet-hazir-ayarlar.png" width="1440" height="900" alt="tlk-rpf: overview of a graphics pack with detected presets">
           </button>
         </figure>
       </div>
     </section>
 
-    <section class="seritler" aria-label="Öne çıkanlar">
+    <section class="seritler" aria-label="Highlights">
       <div class="kap serit-ic">
         <div><strong><span class="tr">Yedek + geri al</span><span class="en">Backup + undo</span></strong><span class="tr">Her kayıt öncesi yedek, dosya başına son 20</span><span class="en">A backup before every save, last 20 per file</span></div>
         <div><strong><span class="tr">FiveM gibi okur</span><span class="en">Reads like FiveM</span></strong><span class="tr">Yüklenmeyecek modları nedeniyle gösterir</span><span class="en">Flags mods FiveM will ignore, with the reason</span></div>
@@ -91,7 +91,7 @@
             <h3><span class="tr">Mods yöneticisi ve çakışmalar</span><span class="en">Mods manager and conflicts</span></h3>
             <p><span class="tr">Modları tek tıkla aç/kapa. Aynı oyun dosyasını değiştiren modları gör, kopyaları karşılaştır (birebir aynı mı, farklı ayar, doku ya da satır) ve birini kapat.</span><span class="en">Toggle mods with one click. See mods that replace the same game file, compare the copies (identical, different settings, textures or lines) and switch one off.</span></p>
           </div>
-          <button type="button" class="buyut" data-src="ekran/cakisma.png"><img loading="lazy" src="ekran/cakisma.png" width="1440" height="900" alt="Çakışma karşılaştırma penceresi"></button>
+          <button type="button" class="buyut" data-src="ekran/cakisma.png"><img loading="lazy" src="ekran/cakisma.png" width="1440" height="900" alt="Conflict comparison window"></button>
         </div>
 
         <div class="ozellik ters">
@@ -99,7 +99,7 @@
             <h3><span class="tr">Parçacık efektleri</span><span class="en">Particle effects</span></h3>
             <p><span class="tr"><code>.ypt</code> içindeki her efekt, yayıcı ve parçacık kuralı; renk, boyut, ışık ve doğma hızı anahtar kareleriyle. "blood" ara, hepsini tek adımda yeşile boya.</span><span class="en">Every effect, emitter and particle rule in a <code>.ypt</code> with its colour, size, light and spawn-rate keyframes. Search "blood" and tint all of them green in one undoable step.</span></p>
           </div>
-          <button type="button" class="buyut" data-src="ekran/ypt-efekt-ayarlari.png"><img loading="lazy" src="ekran/ypt-efekt-ayarlari.png" width="1440" height="900" alt="Parçacık efekti düzenleyici"></button>
+          <button type="button" class="buyut" data-src="ekran/ypt-efekt-ayarlari.png"><img loading="lazy" src="ekran/ypt-efekt-ayarlari.png" width="1440" height="900" alt="Particle effect editor"></button>
         </div>
 
         <div class="ozellik">
@@ -107,7 +107,7 @@
             <h3><span class="tr">Harita ve radar</span><span class="en">Pause map and radar</span></h3>
             <p><span class="tr">ESC haritasına foto, logo ve yazı koy; oyun koordinatına göre yerleştir, döndür, ölçekle. Haritaya işle, beğenmezsen geri al ve katmanlar geri gelsin.</span><span class="en">Place photos, logos and text on the ESC map by game coordinates, rotate and scale them, bake them into the tiles and undo the bake to get the layers back.</span></p>
           </div>
-          <button type="button" class="buyut" data-src="ekran/harita-duzenleyici.png"><img loading="lazy" src="ekran/harita-duzenleyici.png" width="1440" height="900" alt="Harita düzenleyici"></button>
+          <button type="button" class="buyut" data-src="ekran/harita-duzenleyici.png"><img loading="lazy" src="ekran/harita-duzenleyici.png" width="1440" height="900" alt="Pause map editor"></button>
         </div>
 
         <div class="ozellik ters">
@@ -115,7 +115,7 @@
             <h3><span class="tr">3B görünüm ve dokular</span><span class="en">3D view and textures</span></h3>
             <p><span class="tr">Modelleri 3B gör, parçaya tıkla, dokusunu değiştir ya da renklendir; sonuç anında görünür. Model ve efekt içine gömülü dokular yerinde düzenlenir ve büyütülebilir. OBJ olarak dışa aktar.</span><span class="en">View models in 3D, click a part to replace or recolour its texture and see it at once. Textures embedded in models and effects are edited in place and can be resized. Export to OBJ.</span></p>
           </div>
-          <button type="button" class="buyut" data-src="ekran/3b-doku-paneli.png"><img loading="lazy" src="ekran/3b-doku-paneli.png" width="1440" height="900" alt="3B görünüm ve doku paneli"></button>
+          <button type="button" class="buyut" data-src="ekran/3b-doku-paneli.png"><img loading="lazy" src="ekran/3b-doku-paneli.png" width="1440" height="900" alt="3D view with texture panel"></button>
         </div>
 
         <div class="izgara">
@@ -151,10 +151,10 @@
       <div class="kap">
         <h2><span class="tr">Ekranlar</span><span class="en">Screenshots</span></h2>
         <div class="galeri">
-          <button type="button" class="buyut" data-src="ekran/model-galerisi.png"><img loading="lazy" src="ekran/model-galerisi.png" width="1440" height="900" alt="Model galerisi"><span><span class="tr">Model galerisi ve paket onarımı</span><span class="en">Model gallery and package repair</span></span></button>
-          <button type="button" class="buyut" data-src="ekran/gfx-arayuz.png"><img loading="lazy" src="ekran/gfx-arayuz.png" width="1440" height="900" alt="Scaleform görselleri"><span><span class="tr">Scaleform arayüz görselleri</span><span class="en">Scaleform UI images</span></span></button>
-          <button type="button" class="buyut" data-src="ekran/carpisma-ybn.png"><img loading="lazy" src="ekran/carpisma-ybn.png" width="1440" height="900" alt="Çarpışma modeli"><span><span class="tr">Çarpışma modeli, malzeme renkli</span><span class="en">Collision mesh by material</span></span></button>
-          <button type="button" class="buyut" data-src="ekran/ozet-hazir-ayarlar.png"><img loading="lazy" src="ekran/ozet-hazir-ayarlar.png" width="1440" height="900" alt="Özet ve hazır ayarlar"><span><span class="tr">Özet: sorunlar ve hazır ayarlar</span><span class="en">Overview: problems and presets</span></span></button>
+          <button type="button" class="buyut" data-src="ekran/model-galerisi.png"><img loading="lazy" src="ekran/model-galerisi.png" width="1440" height="900" alt="Model gallery"><span><span class="tr">Model galerisi ve paket onarımı</span><span class="en">Model gallery and package repair</span></span></button>
+          <button type="button" class="buyut" data-src="ekran/gfx-arayuz.png"><img loading="lazy" src="ekran/gfx-arayuz.png" width="1440" height="900" alt="Scaleform UI images"><span><span class="tr">Scaleform arayüz görselleri</span><span class="en">Scaleform UI images</span></span></button>
+          <button type="button" class="buyut" data-src="ekran/carpisma-ybn.png"><img loading="lazy" src="ekran/carpisma-ybn.png" width="1440" height="900" alt="Collision mesh"><span><span class="tr">Çarpışma modeli, malzeme renkli</span><span class="en">Collision mesh by material</span></span></button>
+          <button type="button" class="buyut" data-src="ekran/ozet-hazir-ayarlar.png"><img loading="lazy" src="ekran/ozet-hazir-ayarlar.png" width="1440" height="900" alt="Overview and presets"><span><span class="tr">Özet: sorunlar ve hazır ayarlar</span><span class="en">Overview: problems and presets</span></span></button>
         </div>
       </div>
     </section>
@@ -244,8 +244,8 @@
     </div>
   </footer>
 
-  <dialog id="buyuk" aria-label="Ekran görüntüsü">
-    <form method="dialog"><button class="kapat" aria-label="Kapat">×</button></form>
+  <dialog id="buyuk" aria-label="Screenshot">
+    <form method="dialog"><button class="kapat" aria-label="Close">×</button></form>
     <img alt="">
   </dialog>
 
