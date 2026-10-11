@@ -9,7 +9,7 @@ All notable changes are listed here. The format follows
 ## [1.2.0] - 2026-10-11
 
 First public release. Versions before 1.2.0 were distributed privately; their notes
-are kept below for reference.
+are kept in CHANGELOG.md for reference.
 
 ### Changed
 
