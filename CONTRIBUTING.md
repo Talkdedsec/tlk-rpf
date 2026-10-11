@@ -5,7 +5,8 @@ for anything larger than a fix, open an issue first so the shape is agreed befor
 code is written.
 
 tlk-rpf is licensed under the GNU General Public License v3.0 only. By opening a pull
-request you agree that your contribution is released under the same license.
+request you agree that your contribution is released under the same license. Everyone
+taking part follows the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Setup
 
