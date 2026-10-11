@@ -1,0 +1,21 @@
+name: Özellik isteği
+description: Yeni bir dosya türü, düzenleyici ya da kolaylık.
+labels: [istek]
+body:
+  - type: textarea
+    id: ihtiyac
+    attributes:
+      label: Ne yapmak istiyorsun?
+      description: Aracın adını değil, ulaşmak istediğin sonucu yaz. Örnek - "silah namlu alevinin rengini değiştirmek".
+    validations:
+      required: true
+  - type: textarea
+    id: simdi
+    attributes:
+      label: Şu an nasıl yapıyorsun?
+      description: OpenIV, CodeWalker ya da elle hangi adımlarla?
+  - type: input
+    id: ornek
+    attributes:
+      label: Örnek mod ya da dosya türü
+      placeholder: ".awc, timecycle_mods_1.xml, weapons.meta…"

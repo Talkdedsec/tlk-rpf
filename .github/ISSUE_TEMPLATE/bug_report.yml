@@ -1,0 +1,48 @@
+name: Hata bildirimi
+description: Bir şey çalışmıyor, çöküyor ya da yanlış sonuç veriyor.
+labels: [hata]
+body:
+  - type: input
+    id: surum
+    attributes:
+      label: Sürüm
+      description: Kurucu adındaki ya da Hakkında'daki sürüm.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: ne-oldu
+    attributes:
+      label: Ne oldu
+      description: Ne yaptın, ne bekliyordun, ne oldu?
+    validations:
+      required: true
+  - type: textarea
+    id: adimlar
+    attributes:
+      label: Tekrarlama adımları
+      placeholder: |
+        1. hitfx.rpf aç
+        2. graphics.ytd > dmg_overlay_fade
+        3. Görselle değiştir…
+    validations:
+      required: true
+  - type: input
+    id: dosya
+    attributes:
+      label: İlgili mod ya da dosya
+      description: Mümkünse modun adı ve indirildiği yer. Başkasının modunu buraya yükleme.
+  - type: dropdown
+    id: oyunda
+    attributes:
+      label: Sorun nerede görünüyor?
+      options:
+        - tlk-rpf içinde
+        - FiveM oyun içinde
+        - İkisinde de
+    validations:
+      required: true
+  - type: textarea
+    id: ek
+    attributes:
+      label: Ekran görüntüsü ya da hata metni

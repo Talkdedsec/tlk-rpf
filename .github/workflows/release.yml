@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Derlenecek etiket (ör. v1.0.1)
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    name: Windows x64
+    runs-on: windows-latest
+    timeout-minutes: 60
+    env:
+      ETIKET: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ env.ETIKET }}
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+
+      - run: npm ci
+
+      - name: Test
+        run: cargo test -p tlk-rpf-core --locked
+
+      - name: Derle
+        run: npx tauri build
+
+      - name: Dosyaları topla
+        shell: pwsh
+        run: |
+          $surum = (Get-Content src-tauri/tauri.conf.json | ConvertFrom-Json).version
+          New-Item -ItemType Directory -Force cikti | Out-Null
+          Copy-Item "target/release/bundle/nsis/*.exe" cikti/
+          Copy-Item "target/release/tlk-rpf.exe" "cikti/tlk-rpf.exe"
+          Push-Location cikti
+          Get-ChildItem -File | ForEach-Object {
+            "{0}  {1}" -f (Get-FileHash $_.Name -Algorithm SHA256).Hash.ToLower(), $_.Name
+          } | Set-Content -Encoding ascii SHA256SUMS.txt
+          Pop-Location
+          "SURUM=$surum" >> $env:GITHUB_ENV
+
+      - name: Sürüme yükle
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $notlar = "tlk-rpf $env:SURUM. Değişiklikler: CHANGELOG.md"
+          gh release view $env:ETIKET *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $env:ETIKET --title "tlk-rpf $env:SURUM" --notes $notlar --verify-tag
+          }
+          gh release upload $env:ETIKET (Get-ChildItem cikti -File).FullName --clobber
