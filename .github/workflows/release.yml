@@ -61,7 +61,7 @@ jobs:
       - name: Publish release
         shell: pwsh
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.RELEASE_TOKEN || github.token }}
         run: |
           # The release notes are this version's section of CHANGELOG.md
           $lines = Get-Content CHANGELOG.md
