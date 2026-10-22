@@ -212,3 +212,7 @@ tlk-rpf is free software: you can redistribute it and/or modify it under the ter
 In short: you may use, study, change and share it. If you distribute a modified version, you must release its source under the same license. Third-party components and their licenses are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 tlk-rpf is not affiliated with Rockstar Games, Take-Two Interactive or Cfx.re. Grand Theft Auto and FiveM are trademarks of their respective owners.
+
+<p align="center">
+  <sub>Built by <a href="https://talkdedsec.com">Talkdedsec</a></sub>
+</p>

@@ -181,3 +181,7 @@ tlk-rpf özgür yazılımdır: Free Software Foundation'ın yayımladığı GNU 
 Kısaca: kullanabilir, inceleyebilir, değiştirebilir ve paylaşabilirsin. Değiştirdiğin bir sürümü dağıtırsan kaynağını da aynı lisansla açman gerekir. Üçüncü taraf bileşenler ve lisansları: [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 tlk-rpf'in Rockstar Games, Take-Two Interactive ya da Cfx.re ile bağı yoktur. Grand Theft Auto ve FiveM sahiplerinin ticari markalarıdır.
+
+<p align="center">
+  <sub><a href="https://talkdedsec.com">Talkdedsec</a> tarafından yapıldı</sub>
+</p>
