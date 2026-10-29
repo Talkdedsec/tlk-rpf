@@ -81,6 +81,35 @@
       </div>
     </section>
 
+    <section id="dene" class="bolum dene" aria-labelledby="dene-baslik">
+      <div class="kap dene-ic">
+        <div class="dene-metin">
+          <h2 id="dene-baslik"><span class="tr">Kanı yeşil yap. <em>Sonra Ctrl+S.</em></span><span class="en">Make the blood green. <em>Then Ctrl+S.</em></span></h2>
+          <p class="bolum-alt"><span class="tr">Doku düzenleyicinin yeniden renklendirmesi, tarayıcında örnek bir doku üzerinde. Ton, doygunluk ve parlaklık, uygulamadaki gibi. Kaydetmek önce yedek alır; FiveM dosyayı açık tutuyorsa yazmayı reddeder.</span><span class="en">The texture editor’s recolour, on a sample texture in your browser. Hue, saturation and brightness, the way the app applies them. Saving takes a backup first, and refuses to write while FiveM has the file open.</span></p>
+          <div class="ayar" role="group" aria-label="Recolour">
+            <label><span><span class="tr">Ton</span><span class="en">Hue</span></span><input type="range" id="r-ton" min="-180" max="180" value="0"><output for="r-ton">0°</output></label>
+            <label><span><span class="tr">Doygunluk</span><span class="en">Saturation</span></span><input type="range" id="r-doy" min="0" max="200" value="100"><output for="r-doy">100%</output></label>
+            <label><span><span class="tr">Parlaklık</span><span class="en">Brightness</span></span><input type="range" id="r-par" min="40" max="160" value="100"><output for="r-par">100%</output></label>
+          </div>
+          <div class="hazir">
+            <button type="button" data-h="120,110,95"><span class="tr">Yeşil kan</span><span class="en">Green blood</span></button>
+            <button type="button" data-h="-130,120,110"><span class="tr">Mavi</span><span class="en">Blue</span></button>
+            <button type="button" data-h="0,0,120"><span class="tr">Gri</span><span class="en">Grey</span></button>
+            <button type="button" data-h="0,100,100"><span class="tr">Özgün</span><span class="en">Original</span></button>
+          </div>
+        </div>
+        <div class="doku">
+          <div class="doku-bas"><span>blood_splat_02</span><span class="soluk">512 × 512 · DXT5 · mods/kill-effect.rpf</span></div>
+          <canvas id="doku" width="512" height="512" role="img" aria-label="Sample blood splatter texture"></canvas>
+          <div class="doku-alt">
+            <label class="fivem"><input type="checkbox" id="fivem"> <span class="tr">FiveM açık</span><span class="en">FiveM is running</span></label>
+            <button type="button" class="dugme birincil" id="kaydet"><kbd>Ctrl+S</kbd> <span class="tr">Kaydet</span><span class="en">Save</span></button>
+          </div>
+          <p class="kayit" id="kayit" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
     <section id="ozellikler" class="bolum">
       <div class="kap">
         <h2><span class="tr">Ne yapabilirsin</span><span class="en">What you can do</span></h2>

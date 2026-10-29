@@ -653,3 +653,34 @@ dialog#buyuk .kapat {
     transition: none !important;
   }
 }
+
+/* canlı yeniden renklendirme demosu */
+.dene { border-top: 1px solid var(--cizgi); background: radial-gradient(70% 90% at 85% 40%, var(--vurgu-zemin), transparent 70%); }
+.dene-ic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+.dene h2 { font-size: clamp(34px, 5.4vw, 64px); line-height: 1; letter-spacing: -.03em; }
+.dene h2 em { font-style: normal; color: var(--vurgu-acik); }
+.ayar { display: grid; gap: 14px; margin: 28px 0 18px; }
+.ayar label { display: grid; grid-template-columns: 9.5em minmax(0, 1fr) 4.5em; gap: 14px; align-items: center; font-size: 14px; color: var(--soluk); }
+.ayar output { font-family: var(--mono); font-size: 13px; color: var(--metin); text-align: right; }
+.ayar input[type="range"] { width: 100%; accent-color: var(--vurgu); }
+.hazir { display: flex; flex-wrap: wrap; gap: 8px; }
+.hazir button { padding: 8px 14px; border: 1px solid var(--cizgi-2); border-radius: 999px; background: none; color: var(--soluk); font: inherit; font-size: 13px; cursor: pointer; transition: border-color .2s, color .2s; }
+.hazir button:hover { border-color: var(--vurgu); color: var(--metin); }
+.doku { border: 1px solid var(--cizgi-2); border-radius: 14px; background: var(--panel); overflow: hidden; box-shadow: 0 40px 100px -40px rgba(229, 36, 59, .35); }
+.doku-bas { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; border-bottom: 1px solid var(--cizgi); font-family: var(--mono); font-size: 12px; }
+.doku-bas .soluk { color: var(--cok-soluk); }
+#doku { display: block; width: 100%; height: auto; aspect-ratio: 1; image-rendering: auto;
+  background: repeating-conic-gradient(#1c1c21 0 25%, #16161a 0 50%) 0 0 / 24px 24px; }
+.doku-alt { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 14px; border-top: 1px solid var(--cizgi); }
+.fivem { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; color: var(--soluk); cursor: pointer; }
+.fivem input { accent-color: var(--vurgu); }
+.doku-alt kbd { font-family: var(--mono); font-size: 11px; opacity: .75; margin-right: 4px; }
+.kayit { margin: 0; padding: 0 14px; max-height: 0; overflow: hidden; font-family: var(--mono); font-size: 12px; line-height: 1.6; transition: max-height .4s, padding .4s; }
+.kayit.acik { max-height: 120px; padding: 12px 14px; border-top: 1px solid var(--cizgi); }
+.kayit.iyi { color: var(--yesil); }
+.kayit.kotu { color: var(--vurgu-acik); }
+@media (max-width: 860px) {
+  .dene-ic { grid-template-columns: minmax(0, 1fr); }
+  .ayar label { grid-template-columns: 7.5em minmax(0, 1fr) 4em; }
+  .doku-bas .soluk { display: none; }
+}
